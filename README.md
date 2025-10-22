@@ -26,6 +26,8 @@
 
 <p align="center" >
 <img src="https://fuwari-app.com/images/fuwari_demo_1.0.0.gif" width="720px" />
+<br>
+<img src="https://github.com/user-attachments/assets/44237537-6395-469c-a8fc-e1a064732be5" width="720px" />
 </p>
 
 ## ✅ Feature
