@@ -10,13 +10,26 @@ import Cocoa
 
 extension UserDefaults {
     func setArchiveData<T: NSCoding>(_ object: T, forKey key: String) {
-        let data = NSKeyedArchiver.archivedData(withRootObject: object)
+      do {
+        let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)
         set(data, forKey: key)
+      } catch {
+        NSLog("Failed to archive object for key \(key): \(error)")
+      }
     }
     
     func archiveDataForKey<T: NSCoding>(_: T.Type, key: String) -> T? {
         guard let data = object(forKey: key) as? Data else { return nil }
-        guard let object = NSKeyedUnarchiver.unarchiveObject(with: data) as? T else { return nil }
-        return object
+      do {
+            let unarchiver = try NSKeyedUnarchiver(forReadingFrom: data)
+            unarchiver.requiresSecureCoding = false
+            let object = unarchiver.decodeObject(forKey: NSKeyedArchiveRootObjectKey) as? T
+            unarchiver.finishDecoding()
+            return object
+        } catch {
+            NSLog("Failed to unarchive object for key \(key): \(error)")
+            return nil
+        }
     }
 }
+

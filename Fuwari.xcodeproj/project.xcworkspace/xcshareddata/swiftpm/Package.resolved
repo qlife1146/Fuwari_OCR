@@ -1,5 +1,15 @@
 {
+  "originHash" : "6bf21353d617bd5d662969573d91352ae4e194fe40c393bb0dfc8a046f25f7a9",
   "pins" : [
+    {
+      "identity" : "keyholder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Clipy/KeyHolder",
+      "state" : {
+        "branch" : "master",
+        "revision" : "6b3f7d5ee1a8cf79f3f1ba6f03d14fddff6478ee"
+      }
+    },
     {
       "identity" : "launchatlogin",
       "kind" : "remoteSourceControl",
@@ -8,7 +18,34 @@
         "branch" : "main",
         "revision" : "e8171b3e38a2816f579f58f3dac1522aa39efe41"
       }
+    },
+    {
+      "identity" : "loginservicekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Clipy/LoginServiceKit",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ad922de0efe2384b561375d4d5344e1e932c116d"
+      }
+    },
+    {
+      "identity" : "magnet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Clipy/Magnet",
+      "state" : {
+        "revision" : "26d672a031fd33eac94887b4e19aca0ab4761f45",
+        "version" : "3.4.0"
+      }
+    },
+    {
+      "identity" : "sauce",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Clipy/Sauce",
+      "state" : {
+        "revision" : "df657bc1beba23ffd580953f183cd756b5bcd514",
+        "version" : "2.4.1"
+      }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
