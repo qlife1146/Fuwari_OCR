@@ -3,20 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		30C4E09427CEC8B900EBDCBB /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4E09327CEC8B900EBDCBB /* Regex.swift */; };
+		817902982EC5744600B12E3C /* KeyHolder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817902952EC5744600B12E3C /* KeyHolder.xcframework */; };
+		817902992EC5744600B12E3C /* KeyHolder.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 817902952EC5744600B12E3C /* KeyHolder.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8179029A2EC5744600B12E3C /* Sauce.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817902962EC5744600B12E3C /* Sauce.xcframework */; };
+		8179029B2EC5744600B12E3C /* Sauce.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 817902962EC5744600B12E3C /* Sauce.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8179029C2EC5744600B12E3C /* Magnet.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817902972EC5744600B12E3C /* Magnet.xcframework */; };
+		8179029D2EC5744600B12E3C /* Magnet.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 817902972EC5744600B12E3C /* Magnet.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE103A372845E59E005CA1A0 /* SpaceMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE103A362845E59E005CA1A0 /* SpaceMode.swift */; };
 		BE103A5428467356005CA1A0 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = BE103A5328467356005CA1A0 /* LaunchAtLogin */; };
 		BE23E42F1DFA1623004DA6B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23E42E1DFA1623004DA6B7 /* Constants.swift */; };
-		BE38949F263C20EA00131366 /* KeyHolder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD92F1F25FE3B6B008D6CF8 /* KeyHolder.xcframework */; };
-		BE3894A0263C20EA00131366 /* KeyHolder.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAD92F1F25FE3B6B008D6CF8 /* KeyHolder.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE3894A3263C20EA00131366 /* Magnet.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD92F1C25FE3B6B008D6CF8 /* Magnet.xcframework */; };
-		BE3894A4263C20EA00131366 /* Magnet.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAD92F1C25FE3B6B008D6CF8 /* Magnet.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE3894A5263C20EA00131366 /* Sauce.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD92F2025FE3B6B008D6CF8 /* Sauce.xcframework */; };
-		BE3894A6263C20EA00131366 /* Sauce.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAD92F2025FE3B6B008D6CF8 /* Sauce.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE58969A1DFCEB07007CE7AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE58969C1DFCEB07007CE7AC /* Localizable.strings */; };
 		BE5896A11DFCED26007CE7AC /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5896A01DFCED26007CE7AC /* LocalizedString.swift */; };
 		BE5BE7A11E065C7700820201 /* ShortcutsPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BE79F1E065C7700820201 /* ShortcutsPreferenceViewController.swift */; };
@@ -43,15 +43,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CAD92F2F25FE460F008D6CF8 /* Embed Frameworks */ = {
+		8179029E2EC5744600B12E3C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BE3894A6263C20EA00131366 /* Sauce.xcframework in Embed Frameworks */,
-				BE3894A4263C20EA00131366 /* Magnet.xcframework in Embed Frameworks */,
-				BE3894A0263C20EA00131366 /* KeyHolder.xcframework in Embed Frameworks */,
+				817902992EC5744600B12E3C /* KeyHolder.xcframework in Embed Frameworks */,
+				8179029D2EC5744600B12E3C /* Magnet.xcframework in Embed Frameworks */,
+				8179029B2EC5744600B12E3C /* Sauce.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +60,14 @@
 
 /* Begin PBXFileReference section */
 		30C4E09327CEC8B900EBDCBB /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		817902952EC5744600B12E3C /* KeyHolder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyHolder.xcframework; path = Carthage/Build/KeyHolder.xcframework; sourceTree = "<group>"; };
+		817902962EC5744600B12E3C /* Sauce.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Sauce.xcframework; path = Carthage/Build/Sauce.xcframework; sourceTree = "<group>"; };
+		817902972EC5744600B12E3C /* Magnet.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Magnet.xcframework; path = Carthage/Build/Magnet.xcframework; sourceTree = "<group>"; };
+		8179029F2EC5750F00B12E3C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/ShortcutsPreferenceViewController.strings; sourceTree = "<group>"; };
+		817902A02EC5750F00B12E3C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/PreferencesWindowController.strings; sourceTree = "<group>"; };
+		817902A12EC5750F00B12E3C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/GeneralPreferenceViewController.strings; sourceTree = "<group>"; };
+		817902A22EC5750F00B12E3C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		817902A32EC5750F00B12E3C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BE103A362845E59E005CA1A0 /* SpaceMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceMode.swift; sourceTree = "<group>"; };
 		BE103A50284645E5005CA1A0 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		BE23E42E1DFA1623004DA6B7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -95,10 +103,6 @@
 		BEF580081DFD9786006595B6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		CA72BCDA25FB6F3F0041CB0D /* GeneralPreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferenceViewController.swift; sourceTree = "<group>"; };
 		CA72BCEF25FCA22C0041CB0D /* GyazoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyazoManager.swift; sourceTree = "<group>"; };
-		CAD92F1C25FE3B6B008D6CF8 /* Magnet.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Magnet.xcframework; path = Carthage/Build/Magnet.xcframework; sourceTree = "<group>"; };
-		CAD92F1D25FE3B6B008D6CF8 /* LoginServiceKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LoginServiceKit.xcframework; path = Carthage/Build/LoginServiceKit.xcframework; sourceTree = "<group>"; };
-		CAD92F1F25FE3B6B008D6CF8 /* KeyHolder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KeyHolder.xcframework; path = Carthage/Build/KeyHolder.xcframework; sourceTree = "<group>"; };
-		CAD92F2025FE3B6B008D6CF8 /* Sauce.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Sauce.xcframework; path = Carthage/Build/Sauce.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +111,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE103A5428467356005CA1A0 /* LaunchAtLogin in Frameworks */,
-				BE3894A5263C20EA00131366 /* Sauce.xcframework in Frameworks */,
-				BE3894A3263C20EA00131366 /* Magnet.xcframework in Frameworks */,
-				BE38949F263C20EA00131366 /* KeyHolder.xcframework in Frameworks */,
+				8179029C2EC5744600B12E3C /* Magnet.xcframework in Frameworks */,
+				8179029A2EC5744600B12E3C /* Sauce.xcframework in Frameworks */,
+				817902982EC5744600B12E3C /* KeyHolder.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,11 +123,10 @@
 		BE23E4301DFB8BF4004DA6B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				817902952EC5744600B12E3C /* KeyHolder.xcframework */,
+				817902972EC5744600B12E3C /* Magnet.xcframework */,
+				817902962EC5744600B12E3C /* Sauce.xcframework */,
 				BE103A50284645E5005CA1A0 /* ServiceManagement.framework */,
-				CAD92F1F25FE3B6B008D6CF8 /* KeyHolder.xcframework */,
-				CAD92F1D25FE3B6B008D6CF8 /* LoginServiceKit.xcframework */,
-				CAD92F1C25FE3B6B008D6CF8 /* Magnet.xcframework */,
-				CAD92F2025FE3B6B008D6CF8 /* Sauce.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,7 +227,7 @@
 				BEC844F01DED859300A4A57A /* Frameworks */,
 				BEC844F11DED859300A4A57A /* Resources */,
 				BE103A5528467396005CA1A0 /* Launch at Login Helper */,
-				CAD92F2F25FE460F008D6CF8 /* Embed Frameworks */,
+				8179029E2EC5744600B12E3C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,8 +247,9 @@
 		BEC844EB1DED859300A4A57A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 2610;
 				ORGANIZATIONNAME = AppKnop;
 				TargetAttributes = {
 					BEC844F21DED859300A4A57A = {
@@ -263,6 +267,7 @@
 				en,
 				Base,
 				ja,
+				ko,
 			);
 			mainGroup = BEC844EA1DED859300A4A57A;
 			packageReferences = (
@@ -297,6 +302,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		BE103A5528467396005CA1A0 /* Launch at Login Helper */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -350,6 +356,7 @@
 			children = (
 				BE58969B1DFCEB07007CE7AC /* Base */,
 				BE58969F1DFCEB95007CE7AC /* ja */,
+				817902A32EC5750F00B12E3C /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 			children = (
 				BE9777F31E0EC25500E5934F /* Base */,
 				BE9777F41E0EC25900E5934F /* ja */,
+				8179029F2EC5750F00B12E3C /* ko */,
 			);
 			name = ShortcutsPreferenceViewController.xib;
 			sourceTree = "<group>";
@@ -368,6 +376,7 @@
 			children = (
 				BEC844FD1DED859300A4A57A /* Base */,
 				BEF580081DFD9786006595B6 /* ja */,
+				817902A22EC5750F00B12E3C /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -377,6 +386,7 @@
 			children = (
 				BEF57FF51DFD5CBA006595B6 /* Base */,
 				BE9777F61E0EC26F00E5934F /* ja */,
+				817902A02EC5750F00B12E3C /* ko */,
 			);
 			name = PreferencesWindowController.xib;
 			sourceTree = "<group>";
@@ -386,6 +396,7 @@
 			children = (
 				BEF57FFA1DFD5CD3006595B6 /* Base */,
 				BE357092263FE10900F8C5E0 /* ja */,
+				817902A12EC5750F00B12E3C /* ko */,
 			);
 			name = GeneralPreferenceViewController.xib;
 			sourceTree = "<group>";
@@ -427,9 +438,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QZJ74E9669;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -448,6 +462,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -487,9 +502,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QZJ74E9669;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -501,6 +519,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -512,9 +531,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Fuwari/Fuwari.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = QZJ74E9669;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 6DA7CAGY3R;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build",
@@ -525,9 +550,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.appknop.fuwari;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luca.fuwari-ocr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -540,10 +565,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Fuwari/Fuwari.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = QZJ74E9669;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 6DA7CAGY3R;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = readwrite;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build",
@@ -554,9 +585,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.appknop.fuwari;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luca.fuwari-ocr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;

@@ -1,0 +1,15 @@
+
+/* Class = "NSButtonCell"; title = "Launch at Login"; ObjectID = "7nO-qE-sdg"; */
+"7nO-qE-sdg.title" = "시동 시 로그인";
+
+/* Class = "NSTextFieldCell"; title = "Opacity when moving"; ObjectID = "ZBk-en-dBK"; */
+"ZBk-en-dBK.title" = "이동할 때 투명도";
+
+/* Class = "NSButtonCell"; title = "Show Alert when Upload"; ObjectID = "g3q-Hv-xrg"; */
+"g3q-Hv-xrg.title" = "업로드할 때 알림 표시";
+
+/* Class = "NSTextFieldCell"; title = "Behavior"; ObjectID = "r4j-9y-Hik"; */
+"r4j-9y-Hik.title" = "기능";
+
+/* Class = "NSTextFieldCell"; title = "value"; ObjectID = "zzl-Be-1Tp"; */
+"zzl-Be-1Tp.title" = "value";

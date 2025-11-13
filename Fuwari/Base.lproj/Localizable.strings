@@ -32,7 +32,9 @@
 
 "Updates" = "Updates";
 
-"Capture" = "Capture";
+"Floating Capture" = "Floating Capture";
+
+"OCR Capture" = "OCR Capture";
 
 "About" = "About Fuwari...";
 

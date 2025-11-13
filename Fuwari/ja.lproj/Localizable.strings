@@ -1,10 +1,10 @@
 /*
-  Localizable.strings
-  Fuwari
+ Localizable.strings
+ Fuwari
 
-  Created by Kengo Yokoyama on 2016/12/11.
-  Copyright © 2016年 AppKnop. All rights reserved.
-*/
+ Created by Kengo Yokoyama on 2016/12/11.
+ Copyright © 2016年 AppKnop. All rights reserved.
+ */
 
 "Launch Fuwari on system startup?" = "システム起動時にFuwariを起動しますか?";
 
@@ -32,7 +32,9 @@
 
 "Updates" = "アップデート";
 
-"Capture" = "キャプチャ";
+"Floating Capture" = "フローティング キャプチャ";
+
+"OCR Capture" = "OCR Capture";
 
 "About" = "Fuwariについて...";
 
