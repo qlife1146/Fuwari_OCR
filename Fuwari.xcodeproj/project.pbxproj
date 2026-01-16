@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		30C4E09427CEC8B900EBDCBB /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4E09327CEC8B900EBDCBB /* Regex.swift */; };
+		817902892EC56B8F00B12E3C /* Fuwari Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8179027A2EC5696B00B12E3C /* Fuwari Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		81C2564B2EA8BCEC00D93A12 /* KeyHolder in Frameworks */ = {isa = PBXBuildFile; productRef = 81C2564A2EA8BCEC00D93A12 /* KeyHolder */; };
 		81C2564E2EA8BD0300D93A12 /* LoginServiceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 81C2564D2EA8BD0300D93A12 /* LoginServiceKit */; };
 		BE103A372845E59E005CA1A0 /* SpaceMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE103A362845E59E005CA1A0 /* SpaceMode.swift */; };
@@ -39,6 +40,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		817902882EC56B5F00B12E3C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				817902892EC56B8F00B12E3C /* Fuwari Helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAD92F2F25FE460F008D6CF8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		30C4E09327CEC8B900EBDCBB /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		8179027A2EC5696B00B12E3C /* Fuwari Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuwari Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C256522EA8CAE600D93A12 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/ShortcutsPreferenceViewController.strings; sourceTree = "<group>"; };
 		81C256532EA8CAE600D93A12 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/PreferencesWindowController.strings; sourceTree = "<group>"; };
 		81C256542EA8CAE600D93A12 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/GeneralPreferenceViewController.strings; sourceTree = "<group>"; };
@@ -85,7 +97,7 @@
 		BEC844F81DED859300A4A57A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEC844FA1DED859300A4A57A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC844FD1DED859300A4A57A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BEC844FF1DED859300A4A57A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC844FF1DED859300A4A57A /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		BEF57FE41DFD46AE006595B6 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		BEF57FEE1DFD58D4006595B6 /* NSColor+Fuwari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Fuwari.swift"; sourceTree = "<group>"; };
 		BEF57FF51DFD5CBA006595B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindowController.xib; sourceTree = "<group>"; };
@@ -95,7 +107,18 @@
 		CA72BCEF25FCA22C0041CB0D /* GyazoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyazoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8179027B2EC5696B00B12E3C /* Fuwari Helper */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Fuwari Helper"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		817902772EC5696B00B12E3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEC844F01DED859300A4A57A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC844F51DED859300A4A57A /* Fuwari */,
+				8179027B2EC5696B00B12E3C /* Fuwari Helper */,
 				BEC844F41DED859300A4A57A /* Products */,
 				BE23E4301DFB8BF4004DA6B7 /* Frameworks */,
 			);
@@ -130,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC844F31DED859300A4A57A /* Fuwari.app */,
+				8179027A2EC5696B00B12E3C /* Fuwari Helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +230,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		817902792EC5696B00B12E3C /* Fuwari Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 817902842EC5696C00B12E3C /* Build configuration list for PBXNativeTarget "Fuwari Helper" */;
+			buildPhases = (
+				817902762EC5696B00B12E3C /* Sources */,
+				817902772EC5696B00B12E3C /* Frameworks */,
+				817902782EC5696B00B12E3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8179027B2EC5696B00B12E3C /* Fuwari Helper */,
+			);
+			name = "Fuwari Helper";
+			packageProductDependencies = (
+			);
+			productName = "Fuwari Helper";
+			productReference = 8179027A2EC5696B00B12E3C /* Fuwari Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		BEC844F21DED859300A4A57A /* Fuwari */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEC845021DED859300A4A57A /* Build configuration list for PBXNativeTarget "Fuwari" */;
@@ -213,6 +260,7 @@
 				BEC844F01DED859300A4A57A /* Frameworks */,
 				BEC844F11DED859300A4A57A /* Resources */,
 				CAD92F2F25FE460F008D6CF8 /* Embed Frameworks */,
+				817902882EC56B5F00B12E3C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -235,10 +283,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2600;
 				ORGANIZATIONNAME = AppKnop;
 				TargetAttributes = {
+					817902792EC5696B00B12E3C = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
 					BEC844F21DED859300A4A57A = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 1240;
@@ -267,11 +318,19 @@
 			projectRoot = "";
 			targets = (
 				BEC844F21DED859300A4A57A /* Fuwari */,
+				817902792EC5696B00B12E3C /* Fuwari Helper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		817902782EC5696B00B12E3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEC844F11DED859300A4A57A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +348,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		817902762EC5696B00B12E3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEC844EF1DED859300A4A57A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,6 +437,89 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		817902822EC5696C00B12E3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6DA7CAGY3R;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 AppKnop. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luca.Fuwari-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		817902832EC5696C00B12E3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6DA7CAGY3R;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 AppKnop. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luca.Fuwari-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		BEC845001DED859300A4A57A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -550,6 +699,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		817902842EC5696C00B12E3C /* Build configuration list for PBXNativeTarget "Fuwari Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				817902822EC5696C00B12E3C /* Debug */,
+				817902832EC5696C00B12E3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BEC844EE1DED859300A4A57A /* Build configuration list for PBXProject "Fuwari" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
