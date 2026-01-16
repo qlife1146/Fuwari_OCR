@@ -34,6 +34,12 @@ class ViewController: NSViewController, NSWindowDelegate {
     )
     NotificationCenter.default.addObserver(
       self,
+      selector: #selector(resetFloatingWindows),
+      name: Notification.Name(rawValue: Constants.Notification.captureReset),
+      object: nil
+    )
+    NotificationCenter.default.addObserver(
+      self,
       selector: #selector(NSWindowDelegate.windowDidResize(_:)),
       name: NSWindow.didResizeNotification,
       object: nil
@@ -195,6 +201,11 @@ class ViewController: NSViewController, NSWindowDelegate {
       name: Notification.Name(rawValue: Constants.Notification.ocr),
       object: nil
     )
+    NotificationCenter.default.removeObserver(
+      self,
+      name: Notification.Name(rawValue: Constants.Notification.captureReset),
+      object: nil
+    )
   }
 
   private func createFloatWindow(rect: NSRect, image: CGImage, spaceMode: SpaceMode) {
@@ -206,6 +217,16 @@ class ViewController: NSViewController, NSWindowDelegate {
 
   @objc private func startCapture() {
     ScreenshotManager.shared.startCapture(spaceMode: .all)
+  }
+
+  @objc private func resetFloatingWindows() {
+    guard !windowControllers.isEmpty else { return }
+    let windows = windowControllers
+    windowControllers.removeAll()
+    for window in windows {
+      window.fadeWindow(isIn: false)
+    }
+    oldApp?.activate(options: .activateIgnoringOtherApps)
   }
 
   func windowDidResize(_ notification: Notification) {
@@ -253,4 +274,3 @@ extension ViewController: FloatDelegate {
     }
   }
 }
-
