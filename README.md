@@ -26,6 +26,8 @@
 
 <p align="center" >
 <img src="https://fuwari-app.com/images/fuwari_demo_1.0.0.gif" width="720px" />
+<br>
+<img src="https://github.com/user-attachments/assets/44237537-6395-469c-a8fc-e1a064732be5" width="720px" />
 </p>
 
 ## ✅ Feature
@@ -42,7 +44,37 @@
 
 * Swift 5+
 * Xcode 13.4+
-* Carthage 0.38.0+
+* ~~Carthage 0.38.0+~~
+
+## ❓ How to use
+Follow these steps to open and run the Fuwari project from GitHub in Xcode.
+1. Clone the Repository
+```
+git clone https://github.com/qlife1146/Fuwari.git
+cd Fuwari
+```
+2. Checkout the Feature Branch
+The latest OCR feature code is in the feat/OCR branch.
+Switch to that branch before building:
+```
+git checkout feat/OCR
+git pull origin feat/OCR
+```
+3. Open the Project in Xcode
+Open the .xcodeproj or .xcworkspace file located in the project directory.
+4. Change the Build Scheme
+At the top of Xcode, click the Scheme dropdown (next to the Run ▶ button)
+and set it to Release instead of Debug.
+5. Build the Project
+Go to Product → Build or press ⌘ + B to build the app.
+6. Locate the Built App
+Once the build is complete:
+Open the Project Navigator in Xcode.
+Find the Products folder.
+Right-click on Fuwari.app → Show in Finder.
+7. Run the App
+Drag Fuwari.app into your Applications folder.
+Then double-click it to launch the app.
 
 ## 🤝 Contributing
 

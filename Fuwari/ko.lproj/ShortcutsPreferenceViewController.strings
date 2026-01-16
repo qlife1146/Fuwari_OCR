@@ -1,0 +1,17 @@
+/* Class = "NSTextFieldCell"; title = "Capture Mode"; ObjectID = "a9e-fC-0im"; */
+"a9e-fC-0im.title" = "캡처 모드"
+
+/* Class = "NSTextFieldCell"; title = "Single Tap:"; ObjectID = "1Ho-k6-oPW"; */
+"1Ho-k6-oPW.title" = "한 번 탭:";
+
+/* Class = "NSTextFieldCell"; title = "Double Tap:"; ObjectID = "Ddn-pR-cEy"; */
+"Ddn-pR-cEy.title" = "두 번 탭:";
+
+/* Class = "NSTextFieldCell"; title = "Hot Key"; ObjectID = "c7i-hU-avy"; */
+"c7i-hU-avy.title" = "단축키 설정";
+
+/* Class = "NSTextFieldCell"; title = "Floating Capture"; ObjectID = "ruM-Sl-4kb"; */
+"ruM-Sl-4kb.title" = "플로팅 캡처"
+
+/* Class = "NSTextFieldCell"; title = "OCR Capture"; ObjectID = "6yW-i5-4gu"; */
+"6yW-i5-4gu.title" = "OCR 캡처";
