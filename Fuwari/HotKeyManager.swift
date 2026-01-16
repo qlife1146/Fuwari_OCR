@@ -35,12 +35,16 @@ final class HotKeyManager: NSObject {
     }
   }()
 
+  let captureResetKeyCombo = KeyCombo(key: .zero, cocoaModifiers: [.command, .shift])!
+
   private(set) var captureHotKey: HotKey?
   private(set) var ocrHotKey: HotKey?
+  private(set) var captureResetHotKey: HotKey?
 
   func configure() {
     registerCaptureHotKey(keyCombo: captureKeyCombo)
     registerOcrHotKey(keyCombo: ocrKeyCombo)
+    registerCaptureResetHotKey()
   }
 }
 
@@ -83,6 +87,20 @@ extension HotKeyManager {
     MenuManager.shared.updateCaptureMenuItem()
   }
 
+  func registerCaptureResetHotKey() {
+    HotKeyCenter.shared.unregisterHotKey(with: Constants.HotKey.captureReset)
+    let hotKey = HotKey(
+      identifier: Constants.HotKey.captureReset,
+      keyCombo: captureResetKeyCombo,
+      target: AppDelegate(),
+      action: #selector(AppDelegate.captureReset)
+    )
+    hotKey.register()
+    captureResetHotKey = hotKey
+
+    MenuManager.shared.updateCaptureMenuItem()
+  }
+
   private func saveCaptureKeyCombo(keyCombo: KeyCombo?) {
     if let keyCombo = keyCombo {
       defaults.setArchiveData(keyCombo, forKey: Constants.UserDefaults.captureKeyCombo)
@@ -98,5 +116,5 @@ extension HotKeyManager {
       defaults.removeObject(forKey: Constants.UserDefaults.ocrKeyCombo)
     }
   }
-}
 
+}

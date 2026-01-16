@@ -65,9 +65,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             name: NSNotification.Name(rawValue: Constants.Notification.ocr), object: nil)
     }
 
-    @objc func reset() {
+    @objc func captureReset() {
         NotificationCenter.default.post(
-            name: NSNotification.Name(rawValue: Constants.Notification.reset), object: nil)
+            name: NSNotification.Name(rawValue: Constants.Notification.captureReset), object: nil)
     }
 
     @objc func quit() {

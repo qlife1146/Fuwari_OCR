@@ -20,6 +20,7 @@ enum LocalizedString: String {
     case DontLaunch        = "Don't Launch"
     case FloatingCapture   = "Floating Capture"
     case OcrCapture        = "OCR Capture"
+    case CaptureReset      = "Capture Reset"
     case About             = "About"
     case Save              = "Save"
     case Upload            = "Upload"

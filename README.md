@@ -44,7 +44,7 @@
 
 * Swift 5+
 * Xcode 13.4+
-* ~~Carthage 0.38.0+~~
+* Carthage 0.38.0+
 
 ## ❓ How to use
 Follow these steps to open and run the Fuwari project from GitHub in Xcode.

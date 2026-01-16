@@ -18,7 +18,7 @@ class MenuManager: NSObject {
 
   private var captureItem = NSMenuItem()
   private var ocrItem = NSMenuItem()
-  private var resetItem = NSMenuItem()
+  private var captureResetItem = NSMenuItem()
 
   private func menuModifierFlags(for keyCombo: KeyCombo) -> NSEvent.ModifierFlags {
     var flags: NSEvent.ModifierFlags = []
@@ -82,6 +82,14 @@ class MenuManager: NSObject {
     )
     ocrItem.keyEquivalentModifierMask = menuModifierFlags(for: HotKeyManager.shared.ocrKeyCombo)
 
+    captureResetItem = NSMenuItem(
+      title: LocalizedString.CaptureReset.value,
+      action: #selector(AppDelegate.captureReset),
+      keyEquivalent: baseKeyEquivalent(for: HotKeyManager.shared.captureResetKeyCombo)
+    )
+    captureResetItem.keyEquivalentModifierMask = menuModifierFlags(
+      for: HotKeyManager.shared.captureResetKeyCombo)
+
     let menu = NSMenu()
     menu.addItem(
       NSMenuItem(
@@ -99,7 +107,7 @@ class MenuManager: NSObject {
     menu.addItem(NSMenuItem.separator())
     menu.addItem(captureItem)
     menu.addItem(ocrItem)
-    menu.addItem(resetItem)
+    menu.addItem(captureResetItem)
     menu.addItem(NSMenuItem.separator())
     menu.addItem(
       NSMenuItem(
@@ -117,5 +125,10 @@ class MenuManager: NSObject {
 
     ocrItem.keyEquivalent = baseKeyEquivalent(for: HotKeyManager.shared.ocrKeyCombo)
     ocrItem.keyEquivalentModifierMask = menuModifierFlags(for: HotKeyManager.shared.ocrKeyCombo)
+
+    captureResetItem.keyEquivalent = baseKeyEquivalent(
+      for: HotKeyManager.shared.captureResetKeyCombo)
+    captureResetItem.keyEquivalentModifierMask = menuModifierFlags(
+      for: HotKeyManager.shared.captureResetKeyCombo)
   }
 }
