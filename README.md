@@ -28,6 +28,8 @@
 <img src="https://fuwari-app.com/images/fuwari_demo_1.0.0.gif" width="720px" />
 <br>
 <img src="https://github.com/user-attachments/assets/44237537-6395-469c-a8fc-e1a064732be5" width="720px" />
+<br>
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/32091837/537858870-2b8019fd-a051-4d3c-87bb-360bf30a5bc0.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260120%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260120T060205Z&X-Amz-Expires=300&X-Amz-Signature=c81dac6f690c3743bbf01eb8a56fd7edc451d40db084a9d3b0e08aa380fdb343&X-Amz-SignedHeaders=host" width="720px" />
 </p>
 
 ## ✅ Feature
@@ -38,6 +40,7 @@
   * [x] Change the display range in the space.
   * [x] Can be copied to clipboard.
   * [x] Of course, can be save.
+  * [x] And can be OCR.
 * [x] **Send a screenshot to Gyazo**
 
 ## 📦 Requirement
