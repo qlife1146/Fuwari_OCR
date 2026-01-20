@@ -38,13 +38,6 @@ class ViewController: NSViewController, NSWindowDelegate {
       name: Notification.Name(rawValue: Constants.Notification.captureReset),
       object: nil
     )
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(NSWindowDelegate.windowDidResize(_:)),
-      name: NSWindow.didResizeNotification,
-      object: nil
-    )
-
     oldApp = NSWorkspace.shared.frontmostApplication
     oldApp?.activate(options: .activateIgnoringOtherApps)
 

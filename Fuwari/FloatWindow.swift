@@ -16,12 +16,28 @@ protocol FloatDelegate: AnyObject {
     func close(floatWindow: FloatWindow)
 }
 
-class FloatWindow: NSWindow {
+class FloatWindow: NSWindow, NSWindowDelegate {
 
     override var canBecomeKey: Bool { return true }
     override var canBecomeMain: Bool { return true }
 
     weak var floatDelegate: FloatDelegate? = nil
+
+    private struct ResizeEdges: OptionSet {
+        let rawValue: Int
+
+        static let left = ResizeEdges(rawValue: 1 << 0)
+        static let right = ResizeEdges(rawValue: 1 << 1)
+        static let bottom = ResizeEdges(rawValue: 1 << 2)
+        static let top = ResizeEdges(rawValue: 1 << 3)
+    }
+
+    private var flagsMonitor: Any?
+    private var isFreeResize = false
+    private var isLiveResizing = false
+    private var resizeEdges: ResizeEdges = []
+    private var resizeAnchorFrame = NSRect.zero
+    private let resizeEdgeInset = CGFloat(6.0)
     
     private var closeButton: NSButton!
     private var spaceButton: NSButton!
@@ -143,15 +159,107 @@ class FloatWindow: NSWindow {
         menu?.addItem(currentSpaceMenuItem)
         menu?.addItem(NSMenuItem.separator())
         menu?.addItem(NSMenuItem(title: LocalizedString.Close.value, action: #selector(closeWindow), keyEquivalent: "w"))
-        
+
+        delegate = self
+        flagsMonitor = NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) { [weak self] event in
+            guard let self = self else { return event }
+            if self.isKeyWindow && self.isLiveResizing {
+                self.isFreeResize = event.modifierFlags.contains(.shift)
+            }
+            return event
+        }
         fadeWindow(isIn: true)
     }
-    
+
+    deinit {
+        if let flagsMonitor = flagsMonitor {
+            NSEvent.removeMonitor(flagsMonitor)
+        }
+    }
+
+    func windowWillStartLiveResize(_ notification: Notification) {
+        isLiveResizing = true
+        isFreeResize = NSEvent.modifierFlags.contains(.shift)
+        resizeAnchorFrame = frame
+        resizeEdges = resizeEdges(for: NSEvent.mouseLocation, in: resizeAnchorFrame)
+    }
+
+    func windowDidEndLiveResize(_ notification: Notification) {
+        isLiveResizing = false
+        isFreeResize = false
+        resizeEdges = []
+        resizeAnchorFrame = .zero
+    }
+
+    func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
+        let shiftDown = isFreeResize
+            || NSEvent.modifierFlags.contains(.shift)
+            || (NSApp.currentEvent?.modifierFlags.contains(.shift) ?? false)
+        if shiftDown {
+            if isLiveResizing && !resizeEdges.isEmpty {
+                return freeResizeSize(for: NSEvent.mouseLocation)
+            }
+            return frameSize
+        }
+        guard originalRect.width > 0, originalRect.height > 0 else { return frameSize }
+        let aspectRatio = originalRect.width / originalRect.height
+        let widthFromHeight = frameSize.height * aspectRatio
+        let heightFromWidth = frameSize.width / aspectRatio
+        if abs(widthFromHeight - frameSize.width) < abs(heightFromWidth - frameSize.height) {
+            return NSSize(width: widthFromHeight, height: frameSize.height)
+        }
+        return NSSize(width: frameSize.width, height: heightFromWidth)
+    }
+
     func windowDidResize(_ notification: Notification) {
         windowScale = frame.width > frame.height ? frame.height / originalRect.height : frame.width / originalRect.width
         closeButton.frame = NSRect(x: 4, y: frame.height - 20, width: 16, height: 16)
         spaceButton.frame = NSRect(x: frame.width - 20, y: frame.height - 20, width: 16, height: 16)
         showPopUp(text: "\(Int(windowScale * 100))%")
+    }
+
+    private func resizeEdges(for mouseLocation: NSPoint, in frame: NSRect) -> ResizeEdges {
+        var edges: ResizeEdges = []
+        let leftDistance = abs(mouseLocation.x - frame.minX)
+        let rightDistance = abs(mouseLocation.x - frame.maxX)
+        if min(leftDistance, rightDistance) <= resizeEdgeInset {
+            edges.insert(leftDistance <= rightDistance ? .left : .right)
+        }
+
+        let bottomDistance = abs(mouseLocation.y - frame.minY)
+        let topDistance = abs(mouseLocation.y - frame.maxY)
+        if min(bottomDistance, topDistance) <= resizeEdgeInset {
+            edges.insert(bottomDistance <= topDistance ? .bottom : .top)
+        }
+        if !edges.contains(.left) && !edges.contains(.right) {
+            edges.insert(mouseLocation.x < frame.midX ? .left : .right)
+        }
+        if !edges.contains(.bottom) && !edges.contains(.top) {
+            edges.insert(mouseLocation.y < frame.midY ? .bottom : .top)
+        }
+        return edges
+    }
+
+    private func freeResizeSize(for mouseLocation: NSPoint) -> NSSize {
+        let frame = resizeAnchorFrame
+        var width = frame.width
+        var height = frame.height
+
+        if resizeEdges.contains(.left) {
+            width = frame.maxX - mouseLocation.x
+        } else if resizeEdges.contains(.right) {
+            width = mouseLocation.x - frame.minX
+        }
+        if resizeEdges.contains(.bottom) {
+            height = frame.maxY - mouseLocation.y
+        } else if resizeEdges.contains(.top) {
+            height = mouseLocation.y - frame.minY
+        }
+
+        if width < minSize.width { width = minSize.width }
+        if height < minSize.height { height = minSize.height }
+
+        return NSSize(width: width, height: height)
     }
     
     override func keyDown(with event: NSEvent) {
