@@ -44,7 +44,6 @@ final class HotKeyManager: NSObject {
   func configure() {
     registerCaptureHotKey(keyCombo: captureKeyCombo)
     registerOcrHotKey(keyCombo: ocrKeyCombo)
-    registerCaptureResetHotKey()
   }
 }
 

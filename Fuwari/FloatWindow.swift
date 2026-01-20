@@ -136,7 +136,6 @@ class FloatWindow: NSWindow {
         menu?.addItem(NSMenuItem(title: LocalizedString.Upload.value, action: #selector(uploadImage), keyEquivalent: ""))
         menu?.addItem(NSMenuItem.separator())
         menu?.addItem(NSMenuItem(title: LocalizedString.ZoomReset.value, action: #selector(resetWindowScale), keyEquivalent: "r"))
-        menu?.addItem(NSMenuItem(title: LocalizedString.CaptureReset.value, action: #selector(resetWindow), keyEquivalent: "0"))
         menu?.addItem(NSMenuItem(title: LocalizedString.ZoomIn.value, action: #selector(zoomInWindow), keyEquivalent: "+"))
         menu?.addItem(NSMenuItem(title: LocalizedString.ZoomOut.value, action: #selector(zoomOutWindow), keyEquivalent: "-"))
         menu?.addItem(allSpaceMenuItem)

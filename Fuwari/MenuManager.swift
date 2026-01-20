@@ -85,10 +85,9 @@ class MenuManager: NSObject {
     captureResetItem = NSMenuItem(
       title: LocalizedString.CaptureReset.value,
       action: #selector(AppDelegate.captureReset),
-      keyEquivalent: baseKeyEquivalent(for: HotKeyManager.shared.captureResetKeyCombo)
+      keyEquivalent: ""
     )
-    captureResetItem.keyEquivalentModifierMask = menuModifierFlags(
-      for: HotKeyManager.shared.captureResetKeyCombo)
+    captureResetItem.keyEquivalentModifierMask = []
 
     let menu = NSMenu()
     menu.addItem(
@@ -126,9 +125,7 @@ class MenuManager: NSObject {
     ocrItem.keyEquivalent = baseKeyEquivalent(for: HotKeyManager.shared.ocrKeyCombo)
     ocrItem.keyEquivalentModifierMask = menuModifierFlags(for: HotKeyManager.shared.ocrKeyCombo)
 
-    captureResetItem.keyEquivalent = baseKeyEquivalent(
-      for: HotKeyManager.shared.captureResetKeyCombo)
-    captureResetItem.keyEquivalentModifierMask = menuModifierFlags(
-      for: HotKeyManager.shared.captureResetKeyCombo)
+    captureResetItem.keyEquivalent = ""
+    captureResetItem.keyEquivalentModifierMask = []
   }
 }
