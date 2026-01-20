@@ -134,6 +134,7 @@ class FloatWindow: NSWindow {
         menu?.addItem(NSMenuItem(title: LocalizedString.Save.value, action: #selector(saveImage), keyEquivalent: "s"))
         menu?.addItem(NSMenuItem.separator())
         menu?.addItem(NSMenuItem(title: LocalizedString.Upload.value, action: #selector(uploadImage), keyEquivalent: ""))
+        menu?.addItem(NSMenuItem(title: LocalizedString.Share.value, action: #selector(shareImage), keyEquivalent: ""))
         menu?.addItem(NSMenuItem.separator())
         menu?.addItem(NSMenuItem(title: LocalizedString.ZoomReset.value, action: #selector(resetWindowScale), keyEquivalent: "r"))
         menu?.addItem(NSMenuItem(title: LocalizedString.ZoomIn.value, action: #selector(zoomInWindow), keyEquivalent: "+"))
@@ -301,6 +302,23 @@ class FloatWindow: NSWindow {
                 let nsImage = NSImage(cgImage: cgImage, size: size)
                 GyazoManager.shared.uploadImage(image: nsImage)
             }
+        }
+    }
+
+    @objc private func shareImage() {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            guard let contentView = self.contentView else { return }
+            guard let cgImage = contentView.layer?.contents as! CGImage? else { return }
+            let size = CGSize(width: cgImage.width, height: cgImage.height)
+            let nsImage = NSImage(cgImage: cgImage, size: size)
+            let picker = NSSharingServicePicker(items: [nsImage])
+            let targetRect = NSRect(
+                x: contentView.bounds.midX,
+                y: contentView.bounds.midY,
+                width: 1,
+                height: 1
+            )
+            picker.show(relativeTo: targetRect, of: contentView, preferredEdge: .minY)
         }
     }
     

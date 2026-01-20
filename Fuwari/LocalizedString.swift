@@ -24,6 +24,7 @@ enum LocalizedString: String {
     case About             = "About"
     case Save              = "Save"
     case Upload            = "Upload"
+    case Share             = "Share"
     case UploadTextTitle   = "Upload Text Title"
     case UploadTextBody    = "Upload Text Body"
     case Copy              = "Copy"
